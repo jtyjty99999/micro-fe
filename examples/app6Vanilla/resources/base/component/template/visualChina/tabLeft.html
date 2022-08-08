@@ -1,0 +1,27 @@
+<!-- 白名单内才显示普通图库和高级图库页卡以及说明 -->
+
+<div class="tab-sub-inline clearfix">
+        <ul class="tab-sub">
+            {{if vcg_free}}
+            <li class="{{if tabType=='freedom'}}active{{/if}}" switchTabType="freedom">
+                <span class="tab-text">免费版权图片</span>
+            </li>
+            {{/if}}
+            {{if !isNewImgCopyrightWhiteList && vcg_charge}}
+            <li class="{{if tabType=='edit'}}active{{/if}}" switchTabType="edit">
+                <span class="tab-text">付费版权图片</span>
+            </li>
+            {{/if}}
+
+        </ul>
+        {{if !isNewImgCopyrightWhiteList && vcg_charge}}
+        <div class="pull-right">
+            <a href="http://om.qq.com/notice/a/20181211/014336.htm" target="_blank" class="intr-link">付费版权图片计费说明<i class="icon icon-pay2"></i></a>
+        </div>
+        {{/if}}
+</div>
+
+
+    <!-- 
+        
+    -->

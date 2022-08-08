@@ -1,0 +1,14 @@
+{{if showType=='list'}}
+    {{include './tabLeft'}}
+    {{include './search'}}
+    {{include './tabRight'}}
+    {{include './body/list'}}
+{{/if}}
+{{if showType=='scroll'}}
+    <div class="insert-gallery-panel scroll-theme">
+        {{include './tabLeft'}}
+        {{include './search'}}
+        {{include './tabRight'}}
+        {{include './body/scroll'}}
+    </div>
+{{/if}}

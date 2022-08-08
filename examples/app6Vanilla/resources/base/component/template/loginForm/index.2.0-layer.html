@@ -1,0 +1,11 @@
+<div class="pop-login-panel" id="om-multipule-login-layer" style="display: block;">
+	<!-- 浮层 login-panel start -->
+    <div class="login-container">
+            <% include('./tab',{}) %>
+            <% include('./login-select',{showFlag:false}) %>
+            <% include('./login-qq',{showFlag:true}) %>
+            <% include('./login-weixin',{showFlag:false}) %>
+            <% include('./login-email',{showFlag:false,email:email}) %>
+    </div>
+    <!--首屏登录框 -->
+</div>

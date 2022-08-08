@@ -1,0 +1,55 @@
+<div class="pop-login-panel" id="login-layer">
+    <div class="login-container">
+        <a class="close" href="javascript:void(0);" title="关闭">×</a>
+
+        <div class="ptlogin-container" style="display: none;">
+
+        </div>
+        <div class="login-panel" style="display:block">
+            <form class="form-control loginForm">
+                <div class="input-group email">
+                    <i class="icon-login icon-login-name"></i>
+                    <input type="text" class="email-input error" value="{{email}}" name="email"  placeholder="邮箱/手机号">
+                </div>
+                <div class="input-group password">
+                    <i class="icon-login icon-login-password"></i>
+                    <input type="password" class="password-input" name="password"  placeholder="密码">
+                </div>
+                <p class="login-error-tips"></p>
+                <div class="login-remember clearFix">
+                    <label class="remember-id pull-left">
+                        <i class="icon-login icon-login-checkbox {{if email!=''}}active{{/if}}"></i>
+                        <!-- 选中的时候追加 checkbox-active-->
+                        {{if email!=''}}
+                        <input type="hidden" name="rememberPassword"  value="1" />
+                        {{else}}
+                        <input type="hidden" name="rememberPassword"  value="0" />
+                        {{/if}}
+                        <span class="remember-txt">记住帐号</span>
+                    </label>
+                    <a class="login-error pull-right" href="forgetPassword" title="忘记密码？"> 忘记密码？</a>
+                </div>
+            </form>
+            <div class="login-submit">
+                <button type="button" class="btnLogin btn btn-primary">登录</button>
+                <button type="button" class="btn btn-primary btn-loading" style="display: none;"><i class="icon-loading-white"></i>登录中</button>
+            </div>
+
+            <div class="login-mode">
+                <span class="login-mode-info">其他登录方式</span>
+                <a class="login-mode-link login-weixin" title="用微信登录" href="javascript:;">
+                    <span class="label-login"><i class="icon-login icon-login-weixin"></i></span>
+                </a>
+                <a class="login-mode-link login-qq" title="用QQ登录" href="javascript:;">
+                    <span class="label-login"><i class="icon-login icon-login-qq"></i></span>
+                </a>
+                <div class="register">
+                    <a class="register-link" href="/userReg/mediaType" title="注册企鹅号">注册企鹅号</a>
+                </div>
+            </div>
+        </div>
+        <!-- login-panel / -->
+
+    </div>
+    <!--首屏登录框 -->
+</div>

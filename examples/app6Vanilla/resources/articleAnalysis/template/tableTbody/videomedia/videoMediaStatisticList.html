@@ -1,0 +1,14 @@
+{{each dataStatistic as item index}}
+<tr>
+    <td  class="text-left">{{item.date}}</td>
+    {{each currentFilterConfig.thead as item1 index}}
+    <td>{{item[item1.type]}}</td>
+    {{/each}}
+    <!--<td  class="text-left">{{item.statistic_date}}</td>-->
+    <!--<td>{{item.read}}</td>-->
+    <!--<td>{{item.exposure}}</td>-->
+    <!--<td>{{item.relay}}</td>-->
+    <!--<td>{{item.collect}}</td>-->
+    <!--<td>{{item.exposure_article}}</td>-->
+</tr>
+{{/each}}

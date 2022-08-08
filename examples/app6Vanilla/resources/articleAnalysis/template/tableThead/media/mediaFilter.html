@@ -1,0 +1,83 @@
+{{if currentFilterConfig.channel.name=='om'}}
+<div class="filter-box filter-box-tongji-article">
+    <div class="filter-row">
+        <h3 class="pull-left">客户端：</h3>
+        <ul class="filter-tab" id="clientTab">
+            <li clientType="news" class="active"><span>腾讯新闻</span></li>
+            <li clientType="kuaibao" ><span>天天快报</span></li>
+        </ul>
+    </div>
+    <!-- filter-row/ -->
+    <div class="filter-row filter-row-date">
+        <h3 class="pull-left">时间：</h3>
+        <ul class="filter-tab date-tab">
+            <li class="active"><span class="time-filter" data-id="0">7日</span></li>
+            <li><span class="time-filter" data-id="1">2周</span></li>
+            <li><span class="time-filter" data-id="2">1个月</span></li>
+            <li><span class="time-filter" data-id="3">3个月</span></li>
+        </ul>
+        <div class="form-calendar">
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text Wdate" id="startdate" readonly>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <span class="form-static-text">至</span>
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text Wdate" id="enddate" readonly>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <button type="button" class="btn btn-default filter-date-btn search-btn">查找</button>
+        </div>
+    </div>
+</div>
+<div class="heading-tongji-inline clearfix">
+    <h3 class="heading-sm pull-left">趋势图</h3>
+    <ul class="tab-lattice pull-right" id="chartDataTab">
+        <li chartDataType="read" class="first active"><span class="text">阅读数</span></li>
+        <li chartDataType="exposure"><span class="text">推荐数</span></li>
+        <li chartDataType="relay"><span class="text">转发数</span></li>
+        <li chartDataType="collect"><span class="text">收藏数</span></li>
+        <li chartDataType="exposure_article" class="last"><span class="text">推荐篇数</span></li>
+    </ul>
+</div>
+{{else currentFilterConfig.channel.name=='qq' || currentFilterConfig.channel.name=='qqBrowser'}}
+<div class="filter-box filter-box-tongji-article">
+    <!-- filter-row/ -->
+    <div class="filter-row filter-row-date">
+        <h3 class="pull-left">时间：</h3>
+        <ul class="filter-tab date-tab">
+            <li class="active"><span class="time-filter" data-id="0">7日</span></li>
+            <li><span class="time-filter" data-id="1">2周</span></li>
+            <li><span class="time-filter" data-id="2">1个月</span></li>
+            <li><span class="time-filter" data-id="3">3个月</span></li>
+        </ul>
+        <div class="form-calendar">
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text Wdate" id="startdate" readonly>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <span class="form-static-text">至</span>
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text Wdate" id="enddate" readonly>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <button type="button" class="btn btn-default filter-date-btn search-btn">查找</button>
+        </div>
+    </div>
+</div>
+<div class="heading-tongji-inline clearfix">
+    <h3 class="heading-sm pull-left">趋势图</h3>
+    <ul class="tab-lattice pull-right" id="chartDataTab">
+        <li chartDataType="read" class="first active"><span class="text">阅读数</span></li>
+        <li chartDataType="exposure"><span class="last">推荐数</span></li>
+    </ul>
+</div>
+{{/if}}

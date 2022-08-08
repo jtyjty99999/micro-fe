@@ -1,0 +1,38 @@
+#app1{
+    width:890px;
+    margin:0 auto;
+}
+.main-heading {
+    position: relative;
+    margin-bottom: 12px;
+    background-color:#fff;
+
+}
+.main-heading h2 {
+    color: #222;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    display: inline-block;
+}
+.main-heading a.intr-link {
+    margin-top: 19px;
+}
+a.intr-link {
+    float: right;
+    color: #666;
+    font-size: 14px;
+}
+.pic,.article,.video{
+    height: 100px;
+    line-height: 100px;
+    clear: both;
+    text-align: center
+}
+.tab{
+    margin-left:10px;
+}
+
+.tab-inline .tab {
+    line-height: 46px;
+}

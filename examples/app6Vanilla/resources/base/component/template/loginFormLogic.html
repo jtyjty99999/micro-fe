@@ -1,0 +1,52 @@
+<div class="pop-login-panel" id="login-layer">
+    <div class="login-container">
+        <a class="close" href="javascript:;" title="关闭">×</a>
+        <div class="ptlogin-container" style="display:none;overflow: hidden;">
+            <!--放前端结构 -->
+        </div>
+        <div class="login-mask" style="display:none;"></div>
+        <div class="login-panel">
+            <a class="close" href="javascript:;" title="关闭">×</a>
+            <h3 class="tit">登录</h3>
+            <form class="form-control loginForm">
+                <div class="input-group email">
+                    <i class="icon-login-name"></i>
+                    <input type="text" class="email-input" id="LEmail" value="{{email}}" name="email" placeholder="邮箱/手机号">
+                </div>
+                <div class="input-group password">
+                    <i class="icon-login-password"></i>
+                    <input type="password" class="password-input" id="LPassword" name="password" placeholder="密码">
+                </div>
+                <!-- 错误提示，请填写名称 -->
+                <p class="login-error-tips"></p>
+                <div class="login-remember clearFix">
+						<label class="remember-id pull-left">
+							<span class="icon-login-checkbox checkbox-active"></span>
+							<!-- 选中的时候追加 checkbox-active-->
+							<input type="checkbox" name="rememberPassword" value="0">
+							<input type="checkbox" name="rememberPassword" value="1" checked="">
+							<span class="remember-txt">记住帐号</span>
+						</label>
+                    <a class="login-error pull-right" href="forgetPassword" title="忘记密码？">忘记密码？</a>
+                </div>
+            </form>
+            <div class="login-submit">
+                <button type="button" class="btnLogin btn btn-primary">登录</button>
+            </div>
+            <div class="login-mode">
+                <span class="login-mode-info">其他登录方式</span>
+                <a class="login-weixin" title="用微信登录" href="javascript:void(0);">
+                    <span class="label-login"><i class="icon-login-weixin"></i></span>
+                </a>
+                <a class="login-qq" title="用QQ登录" href="javascript:void(0);">
+                    <span class="label-login"><i class="icon-login-qq"></i></span>
+                </a>
+            </div>
+            <div class="register">
+                <a class="register-link" href="/userReg/mediaType" title="立即注册">立即注册</a>
+                <span class="line">|</span>
+                <a class="register-link" target="_blank" href="https://kf.om.qq.com/" title="常见问题">常见问题</a>
+            </div>
+        </div>
+    </div>
+</div>

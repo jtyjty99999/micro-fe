@@ -1,0 +1,32 @@
+<div class="pop-body pop-body-lg pop-vote">
+    <ul class="tab clearfix">
+        <li data-id="form" class="active"><span class="tab-text">新建投票</span></li>
+        <li  data-id="list"><span class="tab-text">已有投票</span></li>
+    </ul>
+    <div class="form-horizontal vote-push-form-pop scroll-theme" data-content="form">
+        <!--<div class="form-horizontal vote-push-form popform newVotePage" style="display: none; overflow-y: auto; overflow-x:hidden;   height: 470px;position:relative">-->
+        <div class="votepage"></div>
+    </div>
+    <div class="vote-list vote-list-inner scroll-theme" data-content="list">
+        <table class="table table-vote">
+            <thead>
+                <tr>
+                    <th class="text-left">投票名称</th>
+                    <th>参与人数 </th>
+                    <th class="text-center">起止时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="no-hover" style="display: none;">
+                    <td colspan="4">
+                        <div class="null-mod">
+                            <p><i class="icon icon-null-vote"></i></p>
+                            <p>暂无投票</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

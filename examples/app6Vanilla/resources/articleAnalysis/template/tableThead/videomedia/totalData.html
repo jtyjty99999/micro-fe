@@ -1,0 +1,167 @@
+{{if !data}}
+
+<li>
+    <span class="text-number">0</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+    </div><!-- percent-mod/ -->
+    <span class="text-title">昨日播放视频数</span>
+</li>
+<li class="last">
+    <span class="text-number">0</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+    </div><!-- percent-mod/ -->
+    <span class="text-title">昨日播放量</span>
+</li>
+{{else}}
+
+<li>
+        <span class="text-number {{data['format']}}">{{data['play_video_num']['yestoday']}}</span>
+        <div class="percent-mod">
+            <div class="item">
+                <span class="name">日</span>
+                {{if data['play_video_num']['day_rate']=='-'}}
+                <span class="num">--</span>
+                <span class="icon line"></span>
+                {{else}}
+                <span class="num">{{(data['play_video_num']['day_rate']*100).toFixed(2)}}%</span>
+                {{if data['play_video_num']['day_rate'] > 0}}
+                <span class="icon rise"></span>
+                {{/if}}
+                {{if data['play_video_num']['day_rate'] == 0}}
+                <span class="icon line"></span>
+                {{/if}}
+                {{if data['play_video_num']['day_rate'] < 0}}
+                <span class="icon decline"></span>
+                {{/if}}
+                {{/if}}
+            </div>
+            <div class="item">
+                <span class="name">周</span>
+                {{if data['play_video_num']['week_rate']=='-'}}
+                <span class="num">--</span>
+                <span class="icon line"></span>
+                {{else}}
+                <span class="num">{{(data['play_video_num']['week_rate']*100).toFixed(2)}}%</span>
+                {{if data['play_video_num']['week_rate'] > 0}}
+                <span class="icon rise"></span>
+                {{/if}}
+                {{if data['play_video_num']['week_rate'] == 0}}
+                <span class="icon line"></span>
+                {{/if}}
+                {{if data['play_video_num']['week_rate'] < 0}}
+                <span class="icon decline"></span>
+                {{/if}}
+                {{/if}}
+            </div>
+            <div class="item">
+                <span class="name">月</span>
+                {{if data['play_video_num']['month_rate']=='-'}}
+                <span class="num">--</span>
+                <span class="icon line"></span>
+                {{else}}
+                <span class="num">{{(data['play_video_num']['month_rate']*100).toFixed(2)}}%</span>
+                {{if data['play_video_num']['month_rate'] > 0}}
+                <span class="icon rise"></span>
+                {{/if}}
+                {{if data['play_video_num']['month_rate'] == 0}}
+                <span class="icon line"></span>
+                {{/if}}
+                {{if data['play_video_num']['month_rate'] < 0}}
+                <span class="icon decline"></span>
+                {{/if}}
+                {{/if}}
+            </div>
+        </div>
+        <span class="text-title">昨日播放视频数</span>
+    </li>
+<li class="last">
+    <span class="text-number {{data['format']}}">{{data['play_pv']['yestoday']}}</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            {{if data['play_pv']['day_rate']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['play_pv']['day_rate']*100).toFixed(2)}}%</span>
+            {{if data['play_pv']['day_rate'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['play_pv']['day_rate'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['play_pv']['day_rate'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            {{if data['play_pv']['week_rate']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['play_pv']['week_rate']*100).toFixed(2)}}%</span>
+            {{if data['play_pv']['week_rate'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['play_pv']['week_rate'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['play_pv']['week_rate'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            {{if data['play_pv']['month_rate']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['play_pv']['month_rate']*100).toFixed(2)}}%</span>
+            {{if data['play_pv']['month_rate'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['play_pv']['month_rate'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['play_pv']['month_rate'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    <span class="text-title">昨日播放量</span>
+</li>
+{{/if}}

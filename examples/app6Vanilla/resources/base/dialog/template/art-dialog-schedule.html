@@ -1,0 +1,49 @@
+<div class="pop-body">
+    <div class="form-horizontal article-timer-form"  id="schedule-dialog">
+        <div class="form-group open">
+            <label for="" class="form-label">选择发送时间</label>
+            <div class="form-control">
+                <div class="form-inline">
+                    <div class="ui-select ui-select-date-s" style="width:64px;">
+                        <label class="form-select">
+                            <select class="schedule-select" id="s_day">
+                            </select>
+                        </label>
+                    </div>
+                    <span class="form-static-text">日</span>
+                    <div class="ui-select ui-select-date-s" style="width:64px;">
+                         <label class="form-select">
+                            <select class="schedule-select" id="s_hour">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </label>
+                    </div>
+                    <span class="form-static-text">时</span>
+                    <div class="ui-select ui-select-date-s" style="width:64px;">
+                        <label class="form-select">
+                            <select class="schedule-select" id="s_minute">
+                                <option></option>
+                            </select>
+                        </label>
+                    </div>
+                    <span class="form-static-text">分</span>
+                </div>
+                <p class="help-block error" style="display:none;">错误提示</p>
+            </div>
+        </div>
+        <!--form group / -->
+        <div class="aritcle-timer-text">
+            <p class="help-block text-center">本文章将于  <span class="aritcle-timer-date"  id="schedule-pub-tip"></span>  发布</p>
+            {{if warning}}
+                <div class="alert alert-warning" id="scheduleAlertWarning">
+                    <div class="alert-left">
+                        <i class="icon icon-warning-xs"></i><strong class="text-title">提示：</strong>
+                    </div>
+                    <div class="alert-content alertWarningContent">{{warning}}</div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

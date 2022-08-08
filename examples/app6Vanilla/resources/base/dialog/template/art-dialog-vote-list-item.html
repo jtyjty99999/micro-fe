@@ -1,0 +1,17 @@
+<tr id="{{Fvoteid}}" class="votetr" choosed="0">
+    <td class="text-left">
+        <h5 class="text-vote-title ellipsis">
+            {{title}}
+        </h5>
+        <!--<p class="text-votetitle">{{title}}</p>-->
+    </td>
+    <td>{{votenum}}</td>
+    <td style="width: 130px;"><span>{{Fstarttime}}-{{Fendtime}}</span></td>
+    <td class="col-action">
+        {{ if selected == 1}}
+        <a class="operate link">取消</a>
+        {{ else }}
+        <a class="operate link">选择</a>
+        {{/if}}
+    </td>
+</tr>

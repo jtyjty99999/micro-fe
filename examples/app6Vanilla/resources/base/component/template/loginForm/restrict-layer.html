@@ -1,0 +1,180 @@
+<style>
+.pop-body {
+    margin: 0 40px;
+    padding: 20px 0;
+}
+.form-horizontal.bind-phone-form.verfiy-form-set {
+    padding: 0 20px;
+}
+.form-group {
+    position: relative;
+}
+.form-horizontal .form-label {
+    float: left;
+    padding: 8px 0;
+    margin-right: 15px;
+}
+.form-label {
+    display: block;
+    color: #222;
+    font-size: 14px;
+    line-height: 24px;
+}
+.form-horizontal .form-control {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+.input-text, .textarea {
+    padding: 10px 14px;
+    height: 18px;
+    line-height: 18px;
+    color: #222;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #d9dee0;
+    border-radius: 2px;
+}
+.input-control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+}
+.input-control .input-text, .input-control .textarea {
+    display: block;
+    width: 100%;
+    margin-left: -30px;
+}
+.form-group-phone .input-text {
+    width: 65%;
+}
+.help-block {
+    font-size: 14px;
+    line-height: 24px;
+    color: #8a939e;
+    position: relative;
+    bottom: -6px;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 120px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #222;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #d9dee0;
+    border-radius: 2px;
+    background-color: #fff;
+    overflow: visible;
+    user-select: none;
+}
+.btn:hover {
+    color: #222;
+    background: #f5f6f6;
+    text-decoration: none;
+}
+.form-group-email .btn-default, .form-group-phone .btn-default {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.label-restirct {
+    width: 45px;
+    text-align: right;
+}
+.btn.disabled, .btn.disabled:active, .btn.disabled:hover {
+    color: #a7afbb!important;
+    background: #e8eaec!important;
+    border-color: #e5e5e5!important;
+    cursor: not-allowed;
+}
+.help-block.error {
+    color: #f54040;
+}
+
+.help-block {
+    font-size: 14px;
+    line-height: 24px;
+    color: #8a939e;
+    position: relative;
+    bottom: -6px;
+}
+.error {
+    color: #f54040 !important;
+}
+.btn-primary {
+    color: #fff;
+    background: #26b2f7;
+    border: 1px solid #26b2f7;
+}
+.btn-primary:hover {
+    color: #fff;
+    background: #0093e0;
+    border-color: #0093e0;
+}
+.form-group-phone .btn-default.waiting {
+    border-color: #dcdddf;
+    background: #f7f7f9;
+    color: #666666;
+}
+
+.form-group-phone .btn-default, .form-group-email .btn-default {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.form-group-phone .btn-default.waiting .second-num {
+    color: #ff5a00;
+    padding-right: 5px;
+}
+.layer-ext-om-msg {
+    z-index: 20000000000 !important;
+}
+{{if hiddenShade==true}}
+.layui-layer-shade{
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+}
+{{/if}}
+</style>
+<div class="popupverifybox" id="popupverifybox-self">
+	<div class="pop-body">
+			<div class="form-horizontal bind-phone-form verfiy-form-set">
+					<div class="form-group form-group-phone">
+						<label for="" class="form-label label-restirct">帐号</label>
+						<div class="form-control" style="padding-bottom: 10px;">
+							<label class="input-control">
+                                <span class="input-text input-name wrong" placeholder="" style="border: none;    padding-left: 0px;">{{account}}（{{accountLabel}}）</span>
+                                <input type="hidden" id="restrict_account_id" value="{{account}}" style="display: none;" />
+                                <input type="hidden" id="restrict_account_type" value="{{account_type}}" style="display: none;" />
+								<div class="succ-icon-set"><i class="icon icon-name"></i><span></span></div>
+							</label>
+						</div>
+					</div>
+					<!-- form-group /-->
+
+					<div class="form-group form-group-phone">
+						<label for="" class="form-label label-restirct">验证码</label>
+						<div class="form-control">
+                                <label class="input-control">
+                                    <input id="restrictauthCodeId" type="text" class="input-text valid"  value="">
+                                    <button type="button" class="btn btn-default getRestrictAuthCode">获取验证码</button>
+                                </label>
+                                <p id="restrictauthCodeErrorId" class="help-block error"></p>
+						</div>
+					</div>
+					<!-- form-group /-->
+					<div class="pop-action" style="text-align: center;">
+						<button type="button" id="restrictBtnSubmit" class="btn  btn-primary disabled">提交</button>
+					</div>
+				
+				</div>
+	</div>
+	<!-- pop-body/ -->
+</div>

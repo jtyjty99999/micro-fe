@@ -1,0 +1,15 @@
+ <li>
+    <div class="upload-cover-block{{if limit300}} disable{{/if}}{{if isShortContent && copyright == '1' && vcg_charge}} forbid{{/if}}" data-info="{{data}}" data-copyright="{{copyright}}" data-isqrcode="{{isqrcode}}" data-url0="{{url0}}" data-url640="{{url640}}" data-url641="{{url641}}" data-url1000="{{url1000}}">
+        {{if copyright == '1' && vcg_charge}}
+        <div class="img-pay-copyright"><i class="icon icon-pay" namecopyright2="{{copyright}}"></i>付费版权图片</div>
+        {{/if}}
+        <span class="pic">
+            <img style="max-height:100%;max-width:100%;" src="{{url}}">
+        </span>
+        <div class="selected-mask"><i class="icon icon-selected-white"></i></div>
+        {{if limit300 }}
+        <div class="selected-mask" style="visibility: visible;"><p class="tip-txt">图片尺寸过小</p></div>
+        {{/if}}
+    </div>
+    <div class="upload-cover-desc"><p>{{title}}</p></div>
+</li>

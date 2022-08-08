@@ -1,0 +1,114 @@
+
+<!-- 此文件为废弃文件 老中医勘察结果 -->
+<div id="original-init" style="display:none;">
+    <div class="pop-body">
+        <ol class="ui-step ui-step-2 ui-step-ycsm">
+            <li class="first active"><span class="number">1</span><span class="text">原创标签须知</span></li>
+            <li class="last "><span class="number">2</span><span class="text">原创标签信息</span></li>
+        </ol>
+        <div class="intro-box intro-box-ycsm scroll-theme">
+            <div class="intro-box-in">
+                <h4>文章原创声明须知</h4>
+                <p>原创特指自己写的、独立完成创作的作品。歪曲、篡改他人创作或者抄袭、剽窃他人创作而产生的作品，改编、翻译、注释、整理他人已有创作而产生的作品均不能说是原创。</p>
+                <p>腾讯内容开放平台鼓励用户发表原创文章，会对声明原创的文章在发布后进行审核，审核通过后文章会被标识为原创文章。
+                </p>
+                <p>如下情形不得对文章进行原创声明，一经发现将永久收回原创声明功能使用权限，导致严重影响的还将对违规帐号予以一定期限的封号处理。</p>
+                <ol>
+                    <li>抄袭的文章；</li>
+                    <li>文章主要篇幅为诸如“法律、法规，国家机关的决议、决定、命令和其他具有立法、行政、司法性质的文件、时事新闻、历法、通用数表、通用表格和公式”等的公共内容；
+                    </li>
+                    <li>大篇幅引用他人内容或文章主要内容为他人作品，如书摘、文摘、报摘等；
+                    </li>
+                    <li>授权转载他人文章；</li>
+                    <li>营销性质的内容；</li>
+                    <li>整合的内容；</li>
+                    <li>色情低俗内容、暴力内容、不实信息等内容。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="pop-action text-center">
+        <button data-action="next" type="button" class="btn btn-primary">下一步</button>
+    </div>
+</div>
+<div id="original-next">
+    <div class="pop-body">
+        <ol class="ui-step ui-step-2 ui-step-ycsm">
+            <li class="first active"><span class="number">1</span><span class="text">原创标签须知</span></li>
+            <li class="last active"><span class="number">2</span><span class="text">原创标签信息</span></li>
+        </ol>
+        <div class="form-horizontal ycsm-form">
+            <div class="form-group">
+                <label class="form-label">媒体平台首发</label>
+                <div class="form-control">
+                    <div class="checkbox-inline">
+                        <label class="ui-radio">
+                            <input type="radio" name="dssx"><i class="icon icon-radio radio-active" id="infoYes"></i>是
+                        </label>
+                        <label class="ui-radio">
+                            <input type="radio" name="dssx"><i class="icon icon-radio" id="infoNo"></i>否
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-label">原文链接</div>
+                <div class="form-control">
+                    <label class="input-control">
+                        <input type="text" class="input-text" value="" id="original_shoufa_url">
+                        <span class="placeholder" style="display: block;">该文在腾讯内容开放平台的文章地址</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">平台名称</label>
+                <div class="form-control">
+                    <label class="input-control">
+                        <input type="text" class="input-text" value="" id="original_shoufa_platform">
+                        <span class="placeholder" style="display: block;">腾讯内容开放平台</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">作者</label>
+                <div class="form-control">
+                    <label class="input-control">
+                        <input type="text" class="input-text" value="" id="original_shoufa_author">
+                    </label>
+                </div>
+            </div>
+            {{ if iszzuser }}
+            <div class="form-group">
+                <label class="form-label">转载类型
+                    <div class="tooltip-inlineblock">
+                        <a href="javascript:;" class="link"><i class="icon icon-help-gray"></i></a>
+                        <div class="tooltip tooltip-bottom" style="width: 370px; left: 50%; margin-left: -75px; bottom:
+                            25px; top:auto; display: none;">
+                            <div class="tooltip-arrow" style="left:75px"></div>
+                            <div class="tooltip-inner">
+                                <p>1. 设置为允许转载的文章在发布后，其他企鹅号转载时无法修改原文章内容及排版等，系统自动为转载文章注明出处，且默认所有企鹅号获得了作者的转载授权。所有依据本功能转载的文章，原创作者再行投诉转载者抄袭侵权将不被支持。</p>
+                                <p>2. 设置为禁止转载的文章，除白名单以外的所有企鹅号无法转载。原创文章发布后将无法修改转载类型设置。</p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <div class="form-control">
+                    <div class="checkbox-inline zz-radio-group">
+                        <label class="ui-radio">
+                            <input type="radio" name="dssx"><i class="icon icon-radio" data-s="ok"></i>允许转载
+                        </label>
+                        <label class="ui-radio">
+                            <input type="radio" name="dssx"><i class="icon icon-radio radio-active" data-s="no"></i>禁止转载
+                        </label>
+                    </div>
+                </div>
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+    <div class="pop-action">
+            <button data-action="confirm" type="button" class="btn btn-primary">确定</button>
+            <button data-action="cancel" type="button" class="btn btn-default">取消</button>
+        </div>
+</div>

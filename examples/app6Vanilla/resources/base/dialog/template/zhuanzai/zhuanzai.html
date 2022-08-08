@@ -1,0 +1,59 @@
+{{ if reason.id === 'allowArticle' }}
+<!-- 允许转载 -->
+<div class="pop-body">
+    <div class="intro-box intro-box-yuanchuang">
+        <p>系统识别您的文章与原创库中的文章相似；<br>
+            继续发布将自动替换原创文章内容，且系统自动标注文章转载来源；<br>
+            您也可以返回修改文章内容。</p>
+        <p>相似文章 <a href="{{data.simiArticleUrl}}" target="_blank">{{data.simiArticleTitle}}</a></p>
+        <p>如有异议，请点击 <a href="javascript:;" class="article-shensu">申诉</a></p>
+        <div class="pop-action">
+            <button type="button" class="btn btn-default pub-go-on">转载发布</button>
+            <button type="button" class="btn btn-primary back-modify">放弃发布</button>
+        </div>
+    </div>
+</div>
+{{ else if reason.id === 'notAllowArticle' }}
+<!-- 禁止转载 -->
+<div class="pop-body">
+    <div class="intro-box intro-box-yuanchuang">
+        <p>抱歉，系统识别您的文章与原创库中的文章相似；<br>
+            原创作者禁止转载，您需要修改文章内容才能继续发布。</p>
+        <p>相似文章 <a href="{{data.simiArticleUrl}}" target="_blank">{{data.simiArticleTitle}}</a></p>
+        <p>如有异议，请点击 <a href="javascript:;" class="article-shensu">申诉</a></p>
+        <div class="pop-action">
+            <button type="button" class="btn btn-primary back-modify">放弃发布</button>
+        </div>
+    </div>
+</div>
+{{ else if reason.id === 'allowPicutre' }}
+<!-- 允许图片转载 -->
+<div class="pop-body">
+    <div class="intro-box intro-box-yuanchuang">
+        <p>系统识别您的文章图片与原创库中的图片相似；<br>
+            继续发布将自动为图片设置转载标签，且系统自动标注图片转载来源；<br>
+            您也可以返回修改文章内容。</p>
+        <p>相似图片 <a href="http://v.qq.com/help/help_agreement.html">花气薰人欲破禅.jpg</a></p>
+        <p>如有异议，请点击 <a href="javascript:;" class="img-shensu">申诉</a></p>
+        <div class="pop-action">
+            <button type="button" class="btn btn-default pub-go-on-img">转载发布</button>
+            <button type="button" class="btn btn-primary back-modify">放弃发布</button>
+        </div>
+    </div>
+    <!-- intro-box/ -->
+</div>
+{{ else if reason.id === 'notAllowPicutre' }}
+<!-- 禁止图片转载 -->
+<div class="pop-body">
+    <div class="intro-box intro-box-yuanchuang">
+        <p>抱歉，系统识别您的文章有图片与原创库中的图片相似；<br>
+            原创作者禁止转载，您需要修改文章内容才能继续发布。</p>
+        <p>相似图片 <a href="http://v.qq.com/help/help_agreement.html">花气薰人欲破禅.jpg</a></p>
+        <p>如有异议，请点击 <a href="javascript:;" class="img-shensu">申诉</a></p>
+        <div class="pop-action">
+            <button type="button" class="btn btn-primary back-modify">放弃发布</button>
+        </div>
+    </div>
+    <!-- intro-box/ -->
+</div>
+{{ /if }}

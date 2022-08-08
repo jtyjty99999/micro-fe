@@ -1,0 +1,5 @@
+<iframe name="{{imageUploadIframeName}}" id="{{imageUploadIframeName}}" style="display:none"></iframe>
+<form method="post"  id="{{imageUploadFormId}}" enctype="multipart/form-data" target="{{imageUploadIframeName}}" action="/image/orginalupload?appkey=1&amp;isRetImgAttr=1&amp;from=user&amp;callback=parent.{{imageUploadSuccessFnName}}" class="image-upload-form" style="display:none">
+    <button type="button" class="btn btn-primary">选择图片</button>
+    <input type="file" class="input-file uploadImgInput" name="Filedata" accept="image/jpg,image/png,image/jpeg" id="Filedata" />
+</form>

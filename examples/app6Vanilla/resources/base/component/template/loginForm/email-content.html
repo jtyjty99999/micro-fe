@@ -1,0 +1,28 @@
+<form class="form-control loginForm">
+    <div class="input-group email">
+        <i class="icon-login icon-login-name"></i>
+        <input type="text" class="email-input error" value="{{email}}" name="email"  placeholder="邮箱/手机号">
+    </div>
+    <div class="input-group password">
+        <i class="icon-login icon-login-password"></i>
+        <input type="password" class="password-input" name="password"  placeholder="密码">
+    </div>
+    <p class="login-error-tips"></p>
+    <div class="login-remember clearFix">
+        <label class="remember-id pull-left">
+            <i class="icon-login icon-login-checkbox {{if email!=''}}active{{/if}}"></i>
+            <!-- 选中的时候追加 checkbox-active-->
+            {{if email!=''}}
+            <input type="hidden" name="rememberPassword"  value="1" />
+            {{else}}
+            <input type="hidden" name="rememberPassword"  value="0" />
+            {{/if}}
+            <span class="remember-txt">记住帐号</span>
+        </label>	
+        <a class="login-error pull-right" href="forgetPassword" title="忘记密码？"> 忘记密码？</a>
+    </div>
+</form>
+<div class="login-submit">
+    <button type="button" class="btnLogin btn btn-primary">登录</button>
+    <button type="button" class="btn btn-primary btn-loading" style="display: none;"><i class="icon-loading-white"></i>登录中</button>
+</div>

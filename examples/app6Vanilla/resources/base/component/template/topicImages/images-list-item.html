@@ -1,0 +1,11 @@
+{{each list as item}}
+<li>
+    <div class="upload-cover-block" data-id="{{item.res_id}}">
+        <span class="pic">
+            <img src="{{item.preview_url}}" style="height:100%;">
+        </span>
+
+        <div class="selected-mask"><i class="icon icon-selected-white"></i></div>
+    </div>
+</li>
+{{/each}}

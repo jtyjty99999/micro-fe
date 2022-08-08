@@ -1,0 +1,151 @@
+<div class="video-networks-box clearfix">
+    <h4>网络状况：</h4>
+    <div class="content">
+        <span class="text-item">        
+            {{if _averageSpeed < 1024}}<i class="icon icon-network-bad"></i>较差
+            {{else if _averageSpeed < ( 1024 * 128)}}<i class="icon icon-network-slow"></i>较慢
+            {{else}}   <i class="icon icon-network-good"></i>较好 {{/if}}
+        </span>
+    </div>
+</div>
+<div class="video-uploading-box">
+    <div class="video-uploading-heading">
+        <h3 class="clearfix">
+            <span class="text-title">{{title}}</span>
+            {{if status=="scanning"||status=="uploading"}}
+            <div class="tooltip-inlineblock" >
+                <a class="link-cancel" action='cancel'>取消上传</a>
+                {{if showCancel}}
+                <div class="tooltip tooltip-top tooltip-confirm" style="left:50%; margin-left: -130px;">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner clearfix">
+                        <p class="text">请确认是否取消正在上传的视频？</p>
+                        <div class="action">
+                            <button type="button" class="btn btn-primary btn-sm">确定</button>
+                            <button type="button" class="btn btn-sm">取消</button>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            {{/if}}
+        </h3>
+        {{if status=="scanning" || status=="uploading"|| status=="successed"}}
+        <span class="text-counter">{{percent}}</span>
+        {{/if}}
+    </div>
+    {{if status=="scanning" || status=="uploading" || status=="successed"}}
+    <div class="progress video-uploading-progress" component>
+        <div class="progress-inner"><div class="bar" style="width:{{percent}};"></div></div>
+        {{if percent=="100%"}}
+        <i class="icon icon-success-xs"></i>
+        {{else}}
+        <i class="icon icon-clock"></i>
+        {{/if}}
+    </div>
+    {{/if}}
+    {{if status=="scanning"}}
+    <div class="video-uploading-status scan">
+        <span class="text-static text-scanning">扫描中...</span>
+        <span class="text-static text-fileupload">已上传 {{processedSize}}</span>
+        <span class="text-static text-filesize">文件大小{{fileSize}}</span>
+    </div>
+    {{/if}}
+    {{if status=="uploading"}}
+    <div class="video-uploading-status upload">
+        <span class="text-static text-filespeed">上传速度 {{averageSpeed}}</span>
+        <span class="text-static text-fileupload">已上传 {{processedSize}}</span>
+        <span class="text-static text-filesize">文件大小{{fileSize}}</span>
+    </div>
+    {{/if}}
+    {{if status=="successed"}}
+    <div class="video-uploading-status success" style=""> <span class="text-static text-filetime">视频上传成功，正在进行转码和审核，您可以在<a href="/article/videoManage">视频素材</a>中查看文件状态</span> </div>
+    {{/if}}
+
+    {{if status==="error" }}
+        {{if errorCode == '4025' }}
+            {{ each dupli_info as info index }}
+                {{ if index === 0 }}
+                    {{ if info.isblack == '1'  }}
+                        <div class="alert alert-warning">
+                            <div class="alert-left">
+                                <i class="icon icon-warning-xs"></i><strong class="text-title">提示：</strong>
+                            </div>
+                            <div class="alert-content">
+                                您上传的视频属于违规视频，请仔细阅读<a href="http://v.qq.com/help/help_agreement.html"
+                                    target="_blank">《互联网视听节目服务管理规定》</a>，并按规定上传视频。如有异议请联系 omvideo@vip.qq.com
+                            </div>
+                        </div>
+                    {{ else if info.isori == '1' }}
+                        <div class="alert alert-warning">
+                            <div class="alert-left">
+                                <i class="icon icon-warning-xs"></i><strong class="text-title">提示：</strong>
+                            </div>
+                            <div class="alert-content">
+                                您上传的视频受版权保护，未经版权者允许，不可进行上传；
+                            </div>
+                            <div class="alert-url-form">
+                                <div class="form-horizontal videocopy-form">
+                                    <div class="form-group">
+                                        <div class="form-control">
+                                            <label class="input-control">
+                                                <input type="text" class="input-text" value="https://v.qq.com/x/page/{{info.vid}}.html">
+                                            </label>
+                                            <button data-clipboard-text="https://v.qq.com/x/page/{{info.vid}}.html" type="button" class="btn btn-defualt btn-browse">复制链接</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>
+                                    {{ if info.title }}
+                                    <span class="text-title">{{ info.title }}</span>
+                                    {{ /if }}
+                                    {{ if info.nick }}
+                                    <span class="text-author">作者：{{ info.nick }}</span>
+                                    {{ /if }}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="alert-help">
+                            <span>如您是原作者，请进行申诉，平台会尽快处理。</span>
+                            <a class="btn btn-primary btn-sm" href="/article/userUploadApply?vid={{info.vid}}" target="_blank">申诉</a>
+                        </div>
+
+                    {{ else }}
+                        <div class="alert alert-warning">
+                            <div class="alert-left">
+                                <i class="icon icon-warning-xs"></i><strong class="text-title">提示：</strong>
+                            </div>
+                            <div class="alert-content">
+                                您上传的视频与企鹅平台的其他视频重复了，不可继续上传；
+                            </div>
+                            <div class="alert-url-form">
+                                <div class="form-horizontal videocopy-form">
+                                    <div class="form-group">
+                                        <div class="form-control">
+                                            <label class="input-control">
+                                                <input type="text" class="input-text" value="https://v.qq.com/x/page/{{info.vid}}.html">
+                                            </label>
+                                            <button data-clipboard-text="https://v.qq.com/x/page/{{info.vid}}.html" type="button" class="btn btn-defualt btn-browse">复制链接</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>
+                                    {{ if info.title }}
+                                    <span class="text-title">{{ info.title }}</span>
+                                    {{ /if }}
+                                    {{ if info.nick }}
+                                    <span class="text-author">作者：{{ info.nick }}</span>
+                                    {{ /if }}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="alert-help">
+                            <span>如您是原作者，请进行申诉，平台会尽快处理。</span>
+                            <a class="btn btn-primary btn-sm" href="/article/userUploadSHAApply?vid={{info.vid}}" target="_blank">申诉</a>
+                        </div>
+                    {{ /if }}
+                {{ /if }}
+            {{ /each }}
+        {{/if}}
+    {{/if}}
+</div>

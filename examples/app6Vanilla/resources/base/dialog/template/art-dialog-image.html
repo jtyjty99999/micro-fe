@@ -1,0 +1,54 @@
+<div class="pop-body pop-body-lg">
+    <ul class="tab clearfix">
+        <li data-id="list"><span class="tab-text">从素材中选择</span></li>
+        <li data-id="form" class="active"><span class="tab-text">手动上传</span></li>
+        {{if !isShortContent}}
+            <li data-id="visualChina"><span class="tab-text">正版图库{{if isShowRedDot === true}}<span class="wake-mark">●</span>{{/if}}</span></li>
+        {{/if}}
+    </ul>
+    <div data-content="list">
+        
+        {{include './_blocks/_copyrightPicsNotice'}}
+        {{if limit300}}<p class="help-block help-block-pic">不支持尺寸小于300*300的图片发布为组图</p>{{/if}}
+        <ul id="image-list" class="upload-cover-list upload-picfile-mod clearfix scroll-theme">
+            
+        </ul>
+        <div class="null-mod" id="image-empty" style="display:none;">
+            <p><i class="icon icon-null-pic"></i></p>
+            <p>暂无图片</p>
+        </div>
+    </div>
+    <div data-content="form" style="display:none" id="upload" >
+        
+        {{include './_blocks/_copyrightPicsNotice'}}
+        {{if limit300}}<p class="help-block help-block-pic" id="upload-limit-tips" style="display: hidden;">不支持尺寸小于300*300的图片发布为组图</p>{{/if}}
+
+        <div class="upload-file-box" id="upload-image-init" style="padding-bottom:120px;">
+            <div class="upload-block upload-block-media">
+                <div class="upload-block-con"><i class="icon icon-add-upload-b"></i></div>
+                <div class="uploadPlaceholder" id="filePickerReady" style="position: absolute;"></div>
+            </div>
+            <h4>点击上传图片</h4>
+            <p class="help-block"{{if limit300}} style="color:#444;"{{/if}}>支持：jpg、jpeg、png、gif，单张图片大小5M以内</p>
+        </div>
+
+        <div class="progress processBar" style="display:none;">
+            <div class="progress-inner">
+                <div class="bar" id="process-total"></div>
+            </div>
+            <span class="cont">已上传<em></em></span>
+            <span class="info" style="display:none;"></span>
+        </div>
+        
+        <ul class="upload-cover-list upload-picfile-mod clearfix  scroll-theme" id="queueList" style="display:none;">
+            <li >
+                <div class="upload-block upload-block-idcard">
+                    <div class="upload-block-con"><i class="icon icon-add-upload"></i></div>
+                    <div class="uploadPlaceholder" id="filePickerBtn" style="position: absolute;"></div>
+                </div>
+            </li>
+            <li id="filePickerBlock" class="filePickerBlock"></li>
+        </ul>
+    </div>
+    <div data-content="visualChina" style="display:none;"></div>
+</div>

@@ -1,0 +1,32 @@
+{
+  "name": "single-spa-portal-example-frame",
+  "version": "1.0.0",
+  "description": "Portal app that builds the foundation of multiple SPAs",
+  "scripts": {
+    "watch": "webpack-dev-server --port 9007",
+    "build": "webpack -p --progress"
+  },
+  "author": "Michael Ruecker",
+  "license": "MIT",
+  "devDependencies": {
+    "art-template": "4.13.2",
+    "art-template-loader": "1.4.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "json-server": "^0.15.1",
+    "mocker-api": "^1.9.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "single-spa": "^4.0.0",
+    "systemjs": "^0.21.4",
+    "zone.js": "^0.8.26"
+  }
+}

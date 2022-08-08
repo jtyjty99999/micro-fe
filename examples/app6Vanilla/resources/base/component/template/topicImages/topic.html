@@ -1,0 +1,46 @@
+{{if !loading}}
+<div class="special-photos-list {{ isPage ? 'zhuanti-photos-list' : '' }}">
+    {{if group_info && group_info.length}}
+    <div class="specialPhotosList" infinityScroll>
+        {{each group_info as item}}
+        {{if item.total_count>3}}
+        <div class="special-photos-item  clearfix">
+            <div class="left">
+                <img src={{item.preview_url}}>
+                <div class="num"><span>{{item.total_count}}</span>张</div>
+            </div>
+            <div class="right">
+                <div class="title">{{item.title}}</div>
+                <button type="button" data-id="{{item.id}}" class="btn toImagelist">创建组图</button>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+
+        {{if loadstatus == -1}}
+            <div class="loading-more nonAutoLoadingMore">
+                <span>加载更多</span>
+            </div>
+        {{else}}
+            {{if scrollLoading}}
+            <div class="loading-more"><i class="icon-loader"></i></div>
+            {{/if}}
+
+            {{if isBottom}}
+            <div class="loading-more more-end">
+                <span class="m-line">——————</span>已显示全部内容<span class="m-line">——————</span>
+            </div>
+            {{/if}}
+        {{/if}}
+    </div>
+
+    {{else}}
+    <div class="null-mod">
+            <p><i class="icon icon-null-pic"></i></p>
+            <p>没有符合条件的图片</p>
+        </div>
+    {{/if}}
+</div>
+{{else}}
+<div class="null-loading"></div>
+{{/if}}

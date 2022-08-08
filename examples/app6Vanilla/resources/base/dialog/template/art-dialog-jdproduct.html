@@ -1,0 +1,43 @@
+<div class="pop-body">
+	<ul class="tab clearfix" style="width: 720px">
+        <li class="active"><span class="tab-text">京东</span></li>
+        <li><span class="tab-text">企鹅优品</span></li>
+    </ul>
+	<div class="insert-goods-panel">
+		<div class="insert-goods-tool clearfix">
+			{{if source == 'article'}}
+			<div class="chosen-wrap inline-block">
+				<label class="form-select">
+					<select class="valid" categoryFlag aria-invalid="false"></select>
+				</label>
+			</div>
+			<div class="search-form search-form-goods-s">
+				<label class="input-control searchProduct">
+					<input type="text" id="product_kw" class="input-text" value="">
+					<span class="placeholder">搜索关键词 / 商品名 / 商品链接 / 商品ID</span>
+				</label>
+				<button data-action="searchProdBtn" type="button" class="btn btn-default"><i class="icon icon-search"></i>搜索</button>
+				<span data-action="clearProd" class="input-clear-btn"><i class="icon icon-clear"></i></span>
+			</div>
+			<div class="help-info pull-left"><span class="text-dark">提示：一篇文章支持添加一个商品</span></div>
+			{{else if source == 'video'}}
+				<div class="search-form search-form-goods pull-left">
+					<label class="input-control searchProduct">
+						<input type="text" id="product_kw" class="input-text" value="">
+						<span class="placeholder">搜索关键词 / 商品名 / 商品链接 / 商品ID</span>
+					</label>
+					<button data-action="searchProdBtn" type="button" class="btn btn-default"><i class="icon icon-search"></i>搜索</button>
+					<span data-action="clearProd" class="input-clear-btn"><i class="icon icon-clear"></i></span>
+				</div>
+				{{if keyword == ''}}
+				<div class="help-info pull-left"><span class="text-dark">请输入关键词查找商品</span></div>
+				{{else}}
+				<div class="help-info pull-left"><span class="text-dark">根据关键词 <span class="text-light">{{keyword}}</span>为您推荐</span></div>
+				{{/if}}
+			{{/if}}
+		</div>
+		<!-- insert-music-tool/ -->
+        <div class="jdProdBody">
+		</div>
+	</div>
+</div>

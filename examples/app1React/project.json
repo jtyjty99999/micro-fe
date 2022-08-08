@@ -1,0 +1,9 @@
+{
+    "version": "1.2.3",
+    "appName": "app1",
+    "hash": "/app1",
+    "prefix": "/module-prefix/",
+    "entry": "//om.gtimg.cn/om/omadmin/xone/app1/singleSpaEntry.js",
+    "store": "//om.gtimg.cn/om/omadmin/xone/app1/store.js",
+    "always": true
+}

@@ -1,0 +1,132 @@
+<div class="form-group form-group-title">
+    <label class="input-control input-control-title">
+        <input type="text" class="input-text verify" id="VoteTitle" value="">
+        <span class="placeholder">请在这里输入投票名称</span>
+        <div class="count"><em>0</em>/<em>30</em></div>
+    </label>
+    <p class="help-block"></p>
+
+    <!--<label for="VoteTitle" class="form-label">投票名称：</label>-->
+
+    <!--<div class="form-control">-->
+        <!--<div class="input-control input-control-count">-->
+            <!--<input type="text" class="input-text verify"  id="VoteTitle" value=""/>-->
+
+            <!--<div class="count">0/30</div>-->
+        <!--</div>-->
+
+        <!--<p class="help-block"></p>-->
+    <!--</div>-->
+</div>
+<!-- form-group /-->
+<div class="form-group">
+    <label  class="form-label">开始时间：</label>
+    <div class="form-control" id="VoteStarttime">
+        <div class="form-inline">
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text day Wdate" name="day" readonly/>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <span class="form-static-text">日</span>
+            <div class="ui-select  ui-select-date-s ui-select-hour">
+                <!--<label class="ui-select-control">
+                    <input type="text" class="input-text hour" disabled value="0">
+                    <span class="ui-select-toggle"><i class="caret"></i></span>
+                </label>
+                <div class="ui-select-dropdown" style="display:none">
+                    <ul class="ui-select-list">
+                    </ul>
+                </div>-->
+                <select class="hourSelect hour" id="sHourSelect"></select>
+            </div>
+            <!-- ui-select/ -->
+
+            <span class="form-static-text">时</span>
+
+            <div class="ui-select  ui-select-date-s ui-select-minute">
+               <!-- <label class="ui-select-control">
+                    <input type="text" class="input-text minute" disabled value="36">
+                    <span class="ui-select-toggle"><i class="caret"></i></span>
+                </label>
+                <div class="ui-select-dropdown" style="display:none">
+                    <ul class="ui-select-list">
+                    </ul>
+                </div>-->
+                <select class="minuteSelect minute" id="sMinuteSelect"></select>
+            </div>
+            <!-- ui-select/ -->
+
+            <span class="form-static-text">分</span>
+
+
+        </div>
+        <!-- form-inline /-->
+
+    </div>
+    <!--        <div class="form-control" id="VoteStarttime">-->
+    <!--            <input type="text" class="input-text day Wdate" name="day"-->
+    <!--                   onclick="WdatePicker({minDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd'} )"/>-->
+    <!--            <span class="form-static-text">日</span>-->
+    <!--            <select class="form-select hour"> </select>-->
+    <!--            <span class="help-block">时</span>-->
+    <!--            <select class="form-select minute"></select>-->
+    <!--            <span class="help-block">分</span>-->
+    <!--        </div>-->
+</div>
+<div class="form-group">
+    <label class="form-label">截止时间：</label>
+
+    <div class="form-control" id="VoteEndtime">
+        <div class="form-inline">
+            <div class="ui-select ui-select-date">
+                <label class="ui-select-control">
+                    <input type="text" class="input-text day Wdate" name="day" readonly/>
+                    <i class="caret"></i>
+                </label>
+            </div>
+            <span class="form-static-text">日</span>
+            <div class="ui-select ui-select-date-s ui-select-hour">
+                <!--<label class="ui-select-control">
+                    <input type="text" class="input-text hour" disabled value="0">
+                    <span class="ui-select-toggle"><i class="caret"></i></span>
+                </label>
+                <div class="ui-select-dropdown" style="display:none;">
+                    <ul class="ui-select-list">
+                    </ul>
+                </div>-->
+                <select class="hourSelect hour" id="eHourSelect"></select>
+            </div>
+            <!-- ui-select/ -->
+
+            <span class="form-static-text">时</span>
+
+            <div class="ui-select ui-select-date-s ui-select-minute">
+                <!--<label class="ui-select-control">
+                    <input type="text" class="input-text minute" disabled value="36">
+                    <span class="ui-select-toggle"><i class="caret"></i></span>
+                </label>
+                <div class="ui-select-dropdown" style="display:none;z-index: 30;">
+                    <ul class="ui-select-list">
+                    </ul>
+                </div>-->
+                <select class="minuteSelect minute" id="eMinuteSelect"></select>
+            </div>
+            <!-- ui-select/ -->
+
+            <span class="form-static-text">分</span>
+
+
+        </div>
+    </div>
+</div>
+<div class="questions">
+</div>
+<div class="add-media-action">
+    <a class="btn btn-default ">
+        <i class="icon icon-add-upload-xs"></i>增加问题
+    </a>
+
+    <!--<a class="link"><i class="icon icon-add-c"></i>增加问题</a>-->
+</div>

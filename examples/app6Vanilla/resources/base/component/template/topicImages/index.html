@@ -1,0 +1,40 @@
+<div id="topicWrap">
+    {{if !isNewImgCopyrightWhiteList && !isPage}}
+    <div class="intr-link-box clearfix ">
+        <a class="intr-link" href="https://static.om.qq.com/om/om_3.0/normal/html/T4Q1ZDnruWdPytQP9QFDiHDphl1K3Hjd.html?rd=637180" target="_blank">专题组图创作说明<i class="icon icon-pay2 intr-icon-margin"></i></a>
+    </div>
+    {{/if}}
+    <div class="insert-pic-tool clearfix" id="searchWrap"></div>
+
+    {{if isPage}}
+        <div class="special-photos-box scroll-theme zhuanti-photos-box">
+            <div id="categoryWrap"></div>
+            <div id="topicListWrap" class="scroll-theme" style="height: 920px;overflow:auto;"></div>
+        </div>
+    {{else}}
+        <div class="special-photos-box scroll-theme">
+            <div id="categoryWrap"></div>
+            <div id="topicListWrap"></div>
+        </div>
+    {{/if}}
+    
+</div>
+<div id="listWrap" style="display: none">
+    {{if !isNewImgCopyrightWhiteList && !isPage}}
+    <div class="intr-link-box clearfix border-set">
+        <a class="intr-link" href="https://static.om.qq.com/om/om_3.0/normal/html/T4Q1ZDnruWdPytQP9QFDiHDphl1K3Hjd.html?rd=637180" target="_blank">专题组图创作说明<i class="icon icon-pay2 intr-icon-margin"></i></a>
+    </div>
+    {{/if}}
+    <div class="special-photos-box {{ isPage ? 'zhuanti-photos-box' : '' }}">
+        <ol class="breadcrumb breadcrumb-b breadcrumb-c">
+            <li class="toTopicList"><a href="#"><i class="icon icon-fallback"></i>返回</a></li>
+            <li>
+                <label class="ui-checkbox text-dark"><input type="checkbox" checked="checked"><i class="icon icon-checkbox "></i>全选</label>
+            </li>
+        </ol>
+        <ul class="upload-cover-list upload-picfile-mod clearfix scroll-theme imagesListWrap">
+
+        </ul>
+    </div>
+</div>
+</div>

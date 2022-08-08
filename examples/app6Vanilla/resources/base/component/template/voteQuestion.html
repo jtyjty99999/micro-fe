@@ -1,0 +1,65 @@
+<div class="form-question-panel questionshow" subjectid="{{subjectid}}" op="{{action}}">
+    <div class="panel-heading">
+        <h5>{{name}}</h5>
+        {{if first!= 1 }}
+        <a  class="link-close deleteQuestion">×</a>
+        {{/if}}
+    </div>
+    <div class="panel-body">
+
+        <div class="form-group">
+            <label class="input-control input-control-title small">
+                <input type="text" class="input-text title verify" value="{{title}}">
+                <span class="placeholder">请在这里输入问题</span>
+                <div class="count"><em class="len">{{title.length}}</em>/<em class="total">30</em></div>
+            </label>
+            <p class="help-block"></p>
+        </div>
+        <div class="vote-detail-box">
+            <div class="form-group">
+                <div class="checkbox-inline">
+                    {{if optiontype == 1 }}
+                    <label class="ui-radio checked">
+                        <input type="radio" name="selectflag{{index}}" value="1" checked><i class="icon icon-radio radio-active"></i>单选
+                    </label>
+                    <label class="ui-radio">
+                        <input class="radio02" type="radio" name="selectflag{{index}}" value="2"><i class="icon icon-radio"></i>多选
+                    </label>
+                    {{ else }}
+                    <label class="ui-radio ">
+                        <input class="radio01" type="radio" name="selectflag{{index}}" value="1"><i class="icon icon-radio"></i>单选
+                    </label>
+                    <label class="ui-radio checked ">
+                        <input class="radio02" type="radio" name="selectflag{{index}}" value="2" checked><i class="icon icon-radio radio-active"></i>多选
+                    </label>
+                    {{/if}}
+                </div>
+            </div>
+
+            <!-- form-group /-->
+            {{each option as value j}}
+            <div class="form-group option optionshow" optionid="{{value.optionid}}" op="{{value.action}}">
+                <label class="input-control input-control-title small">
+                    <input type="text" class="input-text verify"  value="{{value.title}}">
+                    <span class="placeholder">选项 {{j+1}}</span>
+                    <div class="count"><em>{{value.title.length}}</em>/<em>30</em></div>
+
+                </label>
+                    {{if j >= 1 }}
+                    <div class="handle">
+                        {{if j >= 2}}
+                        <a class="link deleteOption">删除</a>
+                        {{/if}}
+                        <!--<a class="link add-option-action">增加</a>-->
+                    </div>
+                    {{/if}}
+                <p class="help-block"></p>
+            </div>
+            {{/each}}
+            <div class="form-group">
+                <a class="btn-add-option">+增加选项</a>
+            </div>
+        </div>
+    </div>
+        <!-- form-group /-->
+</div>

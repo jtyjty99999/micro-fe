@@ -1,0 +1,56 @@
+<div class="pop-body no-tb-p jdProductRenameDiv">           
+	<div class="insert-goods-panel custom-goods">
+		<div class="jdProductContainer">
+			<table class="table table-insert-goods-head">
+				<thead>
+					<tr>
+						<th class="cell-1">商品</th>
+						<th class="cell-2">来源</th>
+						<th class="cell-3">分类</th>
+						<th class="cell-4 cell-sort">价格</th>
+						<th class="cell-5 cell-sort">预估佣金</th>
+					</tr>
+				</thead>
+			</table>
+
+			<div class="insert-goods-body scroll-theme">
+				<table class="table table-insert-goods">					
+					<tbody>
+						<tr>
+							<td class="cell-radio">
+								<label class="ui-radio">
+									<input type="radio" disabled="true" checked="checked"><i class="icon icon-radio radio-active"></i>
+								</label>
+							</td>
+							<td class="cell-pic"><img src="{{imgurl}}" alt=""></td>
+							<td class="cell-good">
+								<a class="good-name link-title" title="{{name}}" href="{{url}}" target="_blank">{{name}}</a>		
+							</td>
+							<td class="cell-2">{{source}}</td>
+							<td class="cell-3">{{catalog}}</td>
+							<td class="cell-4">{{price}}</td>
+							<td class="cell-5">{{commision}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form-horizontal form-custom-name jdProdRenameDiv">
+					<div class="form-group">
+						<label class="form-label">商品名称</label>
+						<div class="form-control">
+							<label class="input-control input-control-counter">
+								<input type="text" class="input-text" value="">
+								<span class="placeholder">自定义商品名称</span>
+								<div class="count"><em class="">0</em>/30</div>
+							</label>
+						</div>
+					</div>
+				</div>             
+				<p class="help-block">商品推广须知<i class="icon icon-tips"></i><br> 每个视频仅允许推广一件商品，商品名称最多不超过30个字，所推广商品需经过审核才能在前台显示。</p>                   
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="pop-action">
+	<button type="button" class="btn btn-default backToJDProduct">上一步</button>
+	<button type="button" class="btn btn-primary backToVideoProduct">确定</button>
+</div>

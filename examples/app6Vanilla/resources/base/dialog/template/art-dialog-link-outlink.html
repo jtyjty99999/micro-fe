@@ -1,0 +1,43 @@
+    <table class="table table-inserturl table-inserturl-thead">
+        <thead>
+            <tr>
+                <th class="cell-urlname">外链文字</th>
+                <th class="cell-urlname">外链链接</th>
+                <th class="cell-urldatetime">失效时间</th>
+                <th class="cell-urlaction">操作</th>
+            </tr>
+        </thead>
+    </table>
+    {{if loading}}
+    <div class="null-loading" style="background-color: white;display: none;"></div>
+    {{else}} {{if list.length == 0}}
+    <div class="null-mod">
+        <p><i class="icon icon-null-link"></i></p>
+        <p>没有符合条件的链接</p>
+    </div>
+    {{else}}
+    <div class="insert-url-body scroll-theme">
+        <table class="table table-inserturl table-inserturl-tbody">
+            <tbody>
+                {{each list as item index}}
+                <tr data-index="{{index}}">
+                    <td class="cell-urlname">
+                        <p class="text">
+                            <a class="link-title ellipsis" style="max-width: 155px" title="{{item.title}}">{{item.title}}</a>
+                        </p>
+                    </td>
+                    <td class="cell-urlname">
+                        <p class="text ellipsis" style="max-width: 200px">{{item.url}}</p>
+                    </td>
+                    <td class="cell-urldatetime">{{item.endtime.replace(/:00$/,"")}}</td>
+                    <td class="cell-urlaction">
+                        <a class="btn btn-default btn-sm">使用</a>
+                        <i class="icon icon-ok-blue" style="display:none;"></i>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+        {{/if}} {{/if}}
+    

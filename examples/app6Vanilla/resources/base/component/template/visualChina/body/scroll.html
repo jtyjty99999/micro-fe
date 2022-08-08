@@ -1,0 +1,52 @@
+{{if loading}}
+    <div class="null-loading"></div>
+{{else}}
+    {{if listData}}
+    {{if listData.length==0}}
+    <div class="null-mod">
+        <p><i class="icon icon-null-pic"></i></p>
+        <p>没有符合条件的图片</p>
+    </div>
+    {{else}}
+    <div class="free-pic-list" style="min-height:425px;">
+        <ul class="pic-list clearfix">
+            {{each listData as item,index}}
+            {{if item.id}}
+            <li class="pic-item" imgsourcetype="{{item.type}}" imgdownloadurl="{{item.download_url}}" imgId="{{item.id}}" imgIsLimit="{{item.is_essentials}}" islocalExist="{{item.is_local_exist==1?1:0}}" imgIndex="{{index}}" imgTitle="{{item.title=='null'?'':item.title}}">
+                <div class="pic-body {{item.id==selectImgId?'active':''}}">
+                    <a href="javascript:void(0);" class="pic">
+                        <img src="{{item.small_url}}"  style="max-height: 100%;">
+                    </a>
+                    {{if item.is_local_exist==1}}
+                    <span class="label-ptype">素材库已有</span>
+                    {{/if}}
+                    {{if selectImgId&&item.id==selectImgId}}
+                    <div class="selected-mask">
+                        <i class="icon icon-selected-white"></i>
+                    </div>
+                    {{/if}}
+
+                </div>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+        {{if noMore==true}}
+        <p class="help-block ">没有更多了</p>
+        {{/if}}
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="null-mod">
+        <p><i class="icon icon-null-pic"></i></p>
+        {{if listCode==18}}
+        <p>当前操作人数过多，请在30秒后重试。</p>
+        {{else}}
+        <p>图库加载失败</p>
+        {{/if}}
+        <div class="null-btn">
+            <button type="button" class="btn btn-primary btn-sm tryAgain">重新加载</button>
+        </div>
+    </div>
+    {{/if}}
+{{/if}}

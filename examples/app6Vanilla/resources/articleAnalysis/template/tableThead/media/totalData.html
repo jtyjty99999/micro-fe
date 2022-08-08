@@ -1,0 +1,168 @@
+{{if !data}}
+<li>
+    <span class="text-number">0</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+    </div><!-- percent-mod/ -->
+    <span class="text-title">昨日阅读篇数
+    </span>
+</li>
+<li>
+    <span class="text-number">0</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            <span class="num">--</span>
+            <span class="icon line"></span>
+        </div>
+    </div><!-- percent-mod/ -->
+    <span class="text-title">昨日阅读量</span>
+</li>
+
+{{else}}
+<li>
+    <span class="text-number {{data['format']}}">{{data['exposure_article']['yesterday_pv']}}</span>
+    <div class="percent-mod">
+        <div class="item">
+            <span class="name">日</span>
+            {{if data['exposure_article']['day_ratio']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['exposure_article']['day_ratio']*100).toFixed(2)}}%</span>
+            {{if data['exposure_article']['day_ratio'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['exposure_article']['day_ratio'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['exposure_article']['day_ratio'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+        <div class="item">
+            <span class="name">周</span>
+            {{if data['exposure_article']['week_ratio']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['exposure_article']['week_ratio']*100).toFixed(2)}}%</span>
+            {{if data['exposure_article']['week_ratio'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['exposure_article']['week_ratio'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['exposure_article']['week_ratio'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+        <div class="item">
+            <span class="name">月</span>
+            {{if data['exposure_article']['month_ratio']=='-'}}
+            <span class="num">--</span>
+            <span class="icon line"></span>
+            {{else}}
+            <span class="num">{{(data['exposure_article']['month_ratio']*100).toFixed(2)}}%</span>
+            {{if data['exposure_article']['month_ratio'] > 0}}
+            <span class="icon rise"></span>
+            {{/if}}
+            {{if data['exposure_article']['month_ratio'] == 0}}
+            <span class="icon line"></span>
+            {{/if}}
+            {{if data['exposure_article']['month_ratio'] < 0}}
+            <span class="icon decline"></span>
+            {{/if}}
+            {{/if}}
+        </div>
+    </div><!-- percent-mod/ -->
+    <span class="text-title">昨日阅读篇数
+    </span>
+</li>
+<li class="last">
+    <span class="text-number {{data['format']}}">{{data['read']['yesterday_pv']}}</span>
+    <div class="percent-mod">
+    <div class="item">
+        <span class="name">日</span>
+        {{if data['read']['day_ratio']=='-'}}
+        <span class="num">--</span>
+        <span class="icon line"></span>
+        {{else}}
+        <span class="num">{{(data['read']['day_ratio']*100).toFixed(2)}}%</span>
+        {{if data['read']['day_ratio'] > 0}}
+        <span class="icon rise"></span>
+        {{/if}}
+        {{if data['read']['day_ratio'] == 0}}
+        <span class="icon line"></span>
+        {{/if}}
+        {{if data['read']['day_ratio'] < 0}}
+        <span class="icon decline"></span>
+        {{/if}}
+        {{/if}}
+    </div>
+    <div class="item">
+        <span class="name">周</span>
+        {{if data['read']['week_ratio']=='-'}}
+        <span class="num">--</span>
+        <span class="icon line"></span>
+        {{else}}
+        <span class="num">{{(data['read']['week_ratio']*100).toFixed(2)}}%</span>
+        {{if data['read']['week_ratio'] > 0}}
+        <span class="icon rise"></span>
+        {{/if}}
+        {{if data['read']['week_ratio'] == 0}}
+        <span class="icon line"></span>
+        {{/if}}
+        {{if data['read']['week_ratio'] < 0}}
+        <span class="icon decline"></span>
+        {{/if}}
+        {{/if}}
+    </div>
+    <div class="item">
+        <span class="name">月</span>
+        {{if data['read']['month_ratio']=='-'}}
+        <span class="num">--</span>
+        <span class="icon line"></span>
+        {{else}}
+        <span class="num">{{(data['read']['month_ratio']*100).toFixed(2)}}%</span>
+        {{if data['read']['month_ratio'] > 0}}
+        <span class="icon rise"></span>
+        {{/if}}
+        {{if data['read']['month_ratio'] == 0}}
+        <span class="icon line"></span>
+        {{/if}}
+        {{if data['read']['month_ratio'] < 0}}
+        <span class="icon decline"></span>
+        {{/if}}
+        {{/if}}
+    </div></div>
+    <span class="text-title">昨日阅读量</span>
+</li>
+{{/if}}
+

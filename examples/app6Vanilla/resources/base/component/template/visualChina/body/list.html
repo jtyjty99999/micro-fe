@@ -1,0 +1,59 @@
+{{if loading}}
+    <div class="null-loading"></div>
+{{else}}
+    {{if listData}}
+    {{if listData.length==0}}
+    <div class="null-mod">
+        <p><i class="icon icon-null-pic"></i></p>
+        <p>没有符合条件的图片</p>
+    </div>
+    {{else}}
+    <div class="free-pic-list">
+        <ul class="pic-list clearfix">
+            {{each listData as item,index}}
+                {{if item.id}}
+                {{if item.is_local_exist==0}}
+                <li class="pic-item">
+                    <div class="pic-body">
+                        <a href="javascript:void(0);" class="pic">
+                            <img src="{{item.small_url}}" alt="" style="max-height: 100%;">
+                        </a>
+                        <button type="button" class="btn btn-add" imgsourcetype="{{item.type}}" imgdownloadurl="{{item.download_url}}" imgId="{{item.id}}" imgIsLimit="{{item.is_essentials}}" imgIndex="{{index}}" imgTitle="{{item.title=='null'?'':item.title}}">
+                            <icon class="icon icon-add-white-sm"></icon>
+                        </button>
+                    </div>
+                </li>
+                {{else}}
+                <li class="pic-item">
+                    <div class="pic-body active">
+                        <!-- 素材库已有，给pic-body追加active -->
+                        <a href="javascript:void(0);" class="pic">
+                            <img src="{{item.small_url}}" alt="" style="max-height: 100%;">
+                        </a>
+                        <span class="label-ptype">素材库已有</span>
+                    </div>
+                </li>
+                {{/if}}
+                {{/if}}
+            {{/each}}
+        </ul>
+        <!-- page start -->
+        <div class="pagination paginationholder">
+        </div>
+        <!-- page end -->
+    </div>
+    {{/if}}
+    {{else}}
+    <div class="null-mod">
+        <p><i class="icon icon-null-pic"></i></p>
+        {{if listCode==18}}
+        <p>当前操作人数过多，请在30秒后重试。</p>
+        {{else}}
+        <p>图库加载失败</p>
+        {{/if}}
+        <div class="null-btn">
+            <button type="button" class="btn btn-primary btn-sm tryAgain">重新加载</button>
+        </div>
+    </div>
+    {{/if}}
+{{/if}}

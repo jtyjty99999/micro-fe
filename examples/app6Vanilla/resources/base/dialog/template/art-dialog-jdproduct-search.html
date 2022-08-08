@@ -1,0 +1,68 @@
+{{if list && list.length > 0}}
+	<table class="table table-insert-goods-head">
+		<thead>
+			<tr>
+				<th class="cell-1">商品</th>
+				<th class="cell-2">来源</th>
+				<th class="cell-3">分类</th>
+				{{if isSortByPrice == 1}}
+				<th class="cell-4 cell-sort priceSort active">价格(元)
+				{{else}}
+				<th class="cell-4 cell-sort priceSort">价格(元)
+				{{/if}}
+					<div class="table-sort">
+					    {{if sortByPrice == 1}}
+						<i class="icon icon-sort-up"></i>
+						{{else}}
+						<i class="icon icon-sort-down"></i>
+						{{/if}}
+					</div>
+				</th>
+				{{if isSortByCommision == 1}}
+				<th class="cell-5 cell-sort commisionSort active">预估佣金(元)
+				{{else}}
+				<th class="cell-5 cell-sort commisionSort">预估佣金(元)
+				{{/if}}
+					<div class="table-sort">
+						{{if sortByCommision == 1}}
+						<i class="icon icon-sort-up"></i>
+						{{else}}
+						<i class="icon icon-sort-down"></i>
+						{{/if}}
+					</div>
+				</th>
+			</tr>
+		</thead>
+	</table>
+
+	<div class="insert-goods-body scroll-theme insert-goods-article">
+		<table class="table table-insert-goods">
+			<tbody>
+			{{each list}}
+				<tr class="productDataRow">
+					<td class="cell-radio" data="{{list[$index].id}}">
+						<label class="ui-radio selectProd">
+							<input type="radio"><i class="icon icon-radio"></i>
+						</label>
+					</td>
+					<td class="cell-pic"><img src="{{list[$index].imgurl}}" alt=""></td>
+					<td class="cell-good">
+						<a class="good-name link-title" title="{{list[$index].name}}" href="{{list[$index].url}}" target="_blank">{{list[$index].name}}</a>
+					</td>
+					<td class="cell-2">{{list[$index].source}}</td>
+					<td class="cell-3">{{list[$index].catalog}}</td>
+					<td class="cell-4">{{list[$index].price}}</td>
+					<td class="cell-5">{{list[$index].commision}}</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+{{ else}}
+	<div class="insert-goods-body scroll-theme">
+		<div class="search-null">
+			<i class="icon icon-sad"></i>
+			<p class="text-dark">根据您的搜索条件 <span class="text-light">{{keyword}}</span><br> 没有搜索到相关的商品，换个条件重新试试</p>
+		</div>
+	</div>
+{{/if}}

@@ -1,0 +1,37 @@
+<div class="pop-body pop-body-lg">
+    <ul class="tab clearfix">
+        <li data-id="page" class="active"><span class="tab-text">从素材中选择</span></li>
+        <li data-id="crop"><span class="tab-text">手动上传</span></li>
+        <li data-id="visualChina"><span class="tab-text">正版图库{{if isShowRedDot === true}}<span class="wake-mark">●</span>{{/if}}</span></li>
+    </ul>
+    <div data-content="page">
+        <ul  style="display: none;" class="upload-cover-list upload-picfile-mod clearfix scroll-theme"></ul>
+        <div class="null-mod" id="image-empty" style="display:none;">
+            <p><i class="icon icon-null-pic"></i></p>
+            <p>暂无图片</p>
+        </div>
+    </div>
+    <div data-content="crop" class="upload-pic-mod">
+        <div class="upload-btn">
+            <div data-action="upload" class="btn btn-default btn-upload-pic"><i class="icon icon-up-pic"></i>上传图片</div>
+            <span class="info-help">支持：jpg、jpeg、png格式，建议大小2M以内</span>
+        </div>
+        
+        <div class="upload-pic-row clearfix">
+            <div class="upload-pic lg">
+                <div class="upload-pic-content" data-action="convas">
+                    <img />
+                   <!-- <span class="text-null">暂无图片</span> -->
+                </div>
+            </div>
+            <div class="upload-pic sm">
+                <h5>预览</h5>
+                <div class="upload-pic-content" data-action="preview">
+                    <img />
+                    <!-- <span class="text-null">暂无图片</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-content="visualChina" style="display:none"></div>
+</div>

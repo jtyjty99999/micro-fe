@@ -1,0 +1,26 @@
+<div class="filter-row ">
+    <!-- <h3 class="pull-left">推荐</h3> -->
+    <ul class="filter-tab firstLevel">
+        {{each categoryData as cd }} 
+        {{if cd.id == category}}
+        <li class="active" data-id="{{cd.id}}" data-name="{{cd.name}}"><span>{{cd.name}}</span></li>
+        {{else}}
+        <li data-id="{{cd.id}}" data-name="{{cd.name}}"><span>{{cd.name}}</span></li>
+        {{/if}} 
+        {{/each}}
+    </ul>
+</div>
+
+<div class="filter-row second-filter-row">
+    <div class="change-box changeBtn"><i class="icon icon-change"></i>换一批</div>
+
+    {{if subCategorys.length>1}}
+    <ul class="filter-tab secondLevel">
+        {{each subCategorys as sc }} {{if sc.id == subCategory}}
+        <li class="active" data-id="{{sc.id}}"><span>{{sc.name}}</span></li>
+        {{else}}
+        <li data-id="{{sc.id}}"><span>{{sc.name}}</span></li>
+        {{/if}} {{/each}}
+    </ul>
+    {{/if}}
+</div>

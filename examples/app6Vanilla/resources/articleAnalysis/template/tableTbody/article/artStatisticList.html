@@ -1,0 +1,162 @@
+
+	<table id="tableList" class="table table table-tongji-tuwen" style="display: table;">
+            <thead>
+                    <tr>
+                            <th class="text-left">文章标题</th>
+                            <th class="text-center">发文日期</th>
+                            <th class="inner-style">总阅读量</th>
+                            <th class="inner-style">分析</th>
+                        </tr>
+            </thead>
+            <tbody>
+
+
+{{each dataStatistic as item index}}
+{{if item.titleFlag == 1}}
+<tr class="maintitle">
+    <td class="text-left">
+        <div class="inline-block title">
+            <a target="_blank" href="https://kuaibao.qq.com/s/{{item.articleId}}" class="link-title">
+                {{item.title}}
+            </a>
+        </div>
+    </td>
+    <td class="text-center">{{item.pubTime}}</td>
+    <td>
+        {{if item.article_type==0 || item.article_type==31 || item.article_type==1}}
+        {{item.read}}
+        {{/if}}
+        {{if item.article_type==56}}
+        {{item.vv}}
+        {{/if}}
+        {{if item.article_type==74 || item.article_type==82}}
+        {{item.read}}
+        {{/if}}
+    </td>
+    <!-- <td>{{item.exposure}}</td> -->
+    {{if item.article_type==74 || item.article_type==82}}
+    <td title="视频直播数据是以场次为单位进行统计，暂无连续周期的详情">
+        <a href="javascript:;" class="link-toggle visited" articleIndex="{{item.articleId}}" titleType="0">实时分析<i class="caret"></i></a>
+        <a class="link realTrendLink disabled">详情</a></td>
+    </td>
+    {{/if}}
+    {{if item.article_type!=74 && item.article_type!=82}}
+    <td>
+        <a href="javascript:;" class="link-toggle link-toggle-chart realtimeAnalysis-art" articleIndex="{{item.articleId}}"  titleType="0">实时分析<i class="caret"></i></a>
+        <a href="/article/detailArticleAnalysis?articleId={{item.articleId}}&article_type={{item.article_type}}&titleType=0" target="_blank" class="link realTrendLink">详情</a>
+    </td>
+    {{/if}}
+
+    <!--<td>{{item.relay}}</td>-->
+    <!--<td>{{item.collect}}</td>-->
+</tr>
+<tr class="subchart">
+
+</tr>
+{{/if}}
+{{if item.titleFlag == 2}}
+<tr class="maintitle">
+    <td class="text-left">
+        <div class="inline-block title">
+            <a target="_blank" href="https://kuaibao.qq.com/s/{{item.articleId}}" class="link-title">
+                {{item.title}}
+            </a>
+            <span class="label-twotitle tooltip-inlineblock">
+                双标题
+                <div class="tooltip tooltip-top" style="width: 270px; left: 50%; margin-left: -135px; display: none;">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                        <p>汇总行总阅读量=截止昨日总阅读量+当日实时数据，标题1、2阅读量仅展示截止昨日总阅读量</p>
+                    </div>
+                </div>
+            </span>
+                <span class="link-toggle link-toggle-title2"><i class="caret"></i></span>
+        </div>
+    </td>
+    <td class="text-center">{{item.pubTime}}</td>
+    <td>
+        {{if item.article_type==0 || item.article_type==31 || item.article_type==1}}
+        {{item.read}}
+        {{/if}}
+        {{if item.article_type==74 || item.article_type==82}}
+        {{item.read}}
+        {{/if}}
+    </td>
+    {{if item.article_type==74 || item.article_type==82}}
+    <td title="视频直播数据是以场次为单位进行统计，暂无连续周期的详情">
+        <a class="link realTrendLink disabled">详情</a></td>
+    </td>
+    {{/if}}
+    {{if item.article_type!=74 && item.article_type!=82}}
+    <td>
+        <a href="javascript:;" class="link-toggle realtimeAnalysis-art" articleIndex="{{item.articleId}}"  titleType="0">实时分析<i class="caret"></i></a>
+        <a href="/article/detailArticleAnalysis?articleId={{item.articleId}}&article_type={{item.article_type}}&titleType=0" target="_blank" class="link realTrendLink">详情</a>
+    </td>
+    {{/if}}
+</tr>
+
+<tr class="subchart"></tr>
+<tr class="subtitle" style="display:none">
+    <td class="text-left">
+        <div class="inline-block title">
+            <a target="_blank" href="https://kuaibao.qq.com/s/{{item.articleId}}" class="link-title">
+                {{item.titleExt.title1.title}}
+            </a>
+        </div>
+    </td>
+    <td class="text-center">{{item.titleExt.title1.pubTime}}</td>
+    <td>
+        {{if item.article_type==0 || item.article_type==31 || item.article_type==1}}
+        {{item.titleExt.title1.read}}
+        {{/if}}
+        {{if item.article_type==74 || item.article_type==82}}
+        {{item.titleExt.title1.read}}
+        {{/if}}
+    </td>
+    {{if item.article_type==74 || item.article_type==82}}
+    <td title="视频直播数据是以场次为单位进行统计，暂无连续周期的详情">
+
+        <a class="link realTrendLink disabled">详情</a></td>
+    </td>
+    {{/if}}
+    {{if item.article_type!=74 && item.article_type!=82}}
+    <td>
+        <a href="/article/detailArticleAnalysis?articleId={{item.articleId}}&article_type={{item.article_type}}&titleType={{item.titleExt.title1.titleType}}" target="_blank" class="link realTrendLink">详情</a>
+    </td>
+    {{/if}}
+</tr>
+
+<tr class="subtitle" style="display:none">
+    <td class="text-left">
+        <div class="inline-block title">
+            <a target="_blank" href="https://kuaibao.qq.com/s/{{item.articleId}}" class="link-title">
+                {{item.titleExt.title2.title2}}
+            </a>
+        </div>
+    </td>
+    <td class="text-center">{{item.titleExt.title2.pubTime}}</td>
+    <td>
+        {{if item.article_type==0 || item.article_type==31 || item.article_type==1}}
+        {{item.titleExt.title2.read}}
+        {{/if}}
+        {{if item.article_type==74 || item.article_type==82}}
+        {{item.titleExt.title2.read}}
+        {{/if}}
+    </td>
+    {{if item.article_type==74 || item.article_type==82}}
+    <td title="视频直播数据是以场次为单位进行统计，暂无连续周期的详情">
+        <a class="link realTrendLink disabled">详情</a></td>
+    </td>
+    {{/if}}
+    {{if item.article_type!=74 && item.article_type!=82}}
+    <td>
+        <a href="/article/detailArticleAnalysis?articleId={{item.articleId}}&article_type={{item.article_type}}&titleType={{item.titleExt.title2.titleType}}" target="_blank" class="link realTrendLink">详情</a>
+    </td>
+    {{/if}}
+</tr>
+
+{{/if}}
+{{/each}}
+
+</tbody>
+</table>

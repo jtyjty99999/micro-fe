@@ -1,0 +1,28 @@
+{{each dataStatistic as item index}}
+<tr class="omArtStatistic">
+    <td class="text-left">
+        <div class="inline-block title">
+            <a target="_blank" href="{{item.url}}" class="link-title">{{item.title}}</a>
+        </div>
+    </td>
+    <td class="text-center">{{item.uploadtime}}</td>
+    <td>{{item.new_total_play_pv}}</td>
+    {{if item.article_type==74 || item.article_type==82}}
+    <td title="视频直播数据是以场次为单位进行统计，暂无连续周期的详情">
+        <a href="javascript:;" class="link-toggle visited" articleIndex="{{item.vid}}">实时分析<i class="caret"></i></a>
+        <a class="link realTrendLink disabled">详情</a></td>
+    </td>
+    {{/if}}
+    {{if item.article_type!=74 && item.article_type!=82}}
+    <td>
+        <a href="javascript:;" class="link-toggle realtimeAnalysis" articleIndex="{{item.vid}}">实时分析<i class="caret"></i></a>
+        <a href="/article/singleVideoStatistic?articleId={{item.vid}}" target="_blank" class="link realTrendLink">详情</a>
+    </td>
+    {{/if}}
+</tr>
+<tr class="tr-toggle open  realtimeContainer">
+
+</tr>
+{{/each}}
+
+

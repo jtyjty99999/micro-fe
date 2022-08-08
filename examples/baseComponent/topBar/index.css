@@ -1,0 +1,602 @@
+
+.homeMenu{
+    margin-right: 40px
+}
+.ivu-icon-md-arrow-dropdown{
+    font-size: 18px;
+}
+.ivu-select-dropdown{
+    display: none;
+}
+
+.banner {
+    position: relative
+}
+
+.bannerImg {
+    position: relative;
+    height: 480px;
+    overflow: hidden
+}
+
+.bannerImg span {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.bannerImg span.active {
+    -webkit-transition: all 1s;
+    transition: all 1s
+}
+
+.bannerBtn {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 22px;
+    text-align: center;
+    list-style: none
+}
+
+.bannerBtn li {
+    margin: 0 13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left
+}
+
+.bannerBtn li a {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 3px
+}
+
+.bannerBtn li a.aBtn {
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease
+}
+
+.homeUser .ivu-dropdown-rel {
+    height: 50px!important
+}
+
+.partOne {
+    height: 235px;
+    padding: 0 10%;
+    background-color: #f2f1f8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+}
+
+.partOne ul {
+    list-style: none
+}
+
+.partOne ul li {
+    width: 20%;
+    float: left;
+    padding-left: 10px
+}
+
+.title {
+    color: #333;
+    font-size: 18px;
+    margin: 25px 0 30px 0
+}
+
+.num {
+    color: #3229d4;
+    font-size: 14px;
+    margin-bottom: 10px
+}
+
+.nameOne {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 30px
+}
+
+.nameTwo {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 25px
+}
+
+.liCss {
+    border-left: 1px solid #cccbd1
+}
+
+.partTwo {
+    padding: 0 10% 30px 10%;
+    background-color: #fff;
+    text-align: centerï¼›
+}
+
+.introduction {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin: 40px 0 30px 0
+}
+
+.colCss {
+    color: #333;
+    padding: 0 40px 0 35px;
+    height: 350px;
+    -webkit-animation: myfirst1-data-v-50d62ca8 .1s;
+    animation: myfirst1-data-v-50d62ca8 .1s;
+    background-color: #fff
+}
+
+@-webkit-keyframes myfirst1-data-v-50d62ca8 {
+    0% {
+        background: -webkit-gradient(linear,left top,right bottom,from(#25c5d1),to(#1593d4));
+        background: linear-gradient(to bottom right,#25c5d1,#1593d4);
+        color: #fff
+    }
+
+    to {
+        background: #fff;
+        color: #333
+    }
+}
+
+@keyframes myfirst1-data-v-50d62ca8 {
+    0% {
+        background: -webkit-gradient(linear,left top,right bottom,from(#25c5d1),to(#1593d4));
+        background: linear-gradient(to bottom right,#25c5d1,#1593d4);
+        color: #fff
+    }
+
+    to {
+        background: #fff;
+        color: #333
+    }
+}
+
+.colCss1 {
+    color: #fff;
+    padding: 0 40px 0 35px;
+    height: 350px;
+    -webkit-animation: myfirst-data-v-50d62ca8 .1s;
+    animation: myfirst-data-v-50d62ca8 .1s;
+    background: -webkit-gradient(linear,left top,right bottom,from(#25c5d1),to(#1593d4));
+    background: linear-gradient(to bottom right,#25c5d1,#1593d4)
+}
+
+@-webkit-keyframes myfirst-data-v-50d62ca8 {
+    0% {
+        background: #fff;
+        color: #333
+    }
+
+    to {
+        background: -webkit-gradient(linear,left top,right bottom,from(#25c5d1),to(#1593d4));
+        background: linear-gradient(to bottom right,#25c5d1,#1593d4);
+        color: #fff
+    }
+}
+
+@keyframes myfirst-data-v-50d62ca8 {
+    0% {
+        background: #fff;
+        color: #333
+    }
+
+    to {
+        background: -webkit-gradient(linear,left top,right bottom,from(#25c5d1),to(#1593d4));
+        background: linear-gradient(to bottom right,#25c5d1,#1593d4);
+        color: #fff
+    }
+}
+
+.imges {
+    margin: 60px 0 50px 0
+}
+
+.introductionTltle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px
+}
+
+.introductionName {
+    font-size: 14px;
+    color: #333
+}
+
+.introductionName1 {
+    font-size: 14px;
+    color: #fff;
+    padding-top: 30px 0
+}
+
+.introductionTltle1 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.parthree {
+    padding: 80px 10%;
+    background-color: #f2f1f8
+}
+
+.playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px
+}
+
+.videoMessage {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    padding-left: 30px;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3)
+}
+
+.videoMessage p {
+    font-size: 14px;
+    color: #fff
+}
+
+.videoTitle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px
+}
+
+.videoImage {
+    display: inline-block;
+    margin-right: 40px
+}
+
+.problem {
+    display: inline-block;
+    width: 100%
+}
+
+.problemCol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    margin-bottom: 25px
+}
+
+.partFour {
+    padding: 0 10%;
+    background-color: #232562;
+    width: 100%;
+    height: 420px
+}
+
+.partFive {
+    background-color: #1b1e44;
+    width: 100%;
+    height: 80px;
+    line-height: 80px
+}
+
+.partFive p {
+    font-size: 12px;
+    text-align: center;
+    color: #fff
+}
+
+.cooperation {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin: 0 0 50px 0;
+    padding-top: 80px
+}
+
+.businessImage {
+    text-align: center;
+    padding-bottom: 40px
+}
+
+.topNav {
+    background-color: transparent
+}
+
+.topNav1,.topNav {
+    background: black;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999
+}
+
+.topNav1 {
+    background-color: #09105f
+}
+
+.logo {
+    margin-top: 22px;
+    margin-left: 20px
+}
+
+.ivu-menu-dark {
+    background: transparent!important
+}
+
+.homeMenu {
+    position: fixed;
+    top: 0;
+    right: 60px
+}
+
+.homeUser {
+    position: fixed;
+    top: 12px;
+    right: 0
+}
+
+.fastRouteGame {
+    background: #60acfc
+}
+
+.fastRouteGame,.fastRoutePaper {
+    float: left;
+    width: 120px;
+    height: 110px;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff
+}
+
+.fastRoutePaper {
+    background: #32d3eb
+}
+
+.fastRouteCircle {
+    background: #5bc49f
+}
+
+.fastRouteBrush,.fastRouteCircle {
+    float: left;
+    width: 120px;
+    height: 110px;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff
+}
+
+.fastRouteBrush {
+    background: #feb64d
+}
+
+.fastRouteOutline {
+    background: #ff7c7c
+}
+
+.fastRouteOutline,.fastRouteReorder {
+    float: left;
+    width: 120px;
+    height: 110px;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff
+}
+
+.fastRouteReorder {
+    background: #9287e7
+}
+
+.more,.rukou {
+    width: 120px;
+    height: 110px;
+    position: relative
+}
+
+.ivu-icon {
+    height: 10px!important
+}
+
+.ivu-icon-ios-game-controller-a-outline:before {
+    content: "\F1D8";
+    font-size: 40px
+}
+
+.ivu-icon-ios-paper-outline:before {
+    content: "\F252";
+    font-size: 40px
+}
+
+.ivu-icon-ios-add-circle-outline:before {
+    content: "\F100";
+    font-size: 40px
+}
+
+.ivu-icon-ios-paper-plane-outline:before {
+    content: "\F253";
+    font-size: 40px
+}
+
+.ivu-icon-md-reorder:before {
+    content: "\F419";
+    font-size: 40px
+}
+
+.ivu-icon-ios-brush-outline:before {
+    content: "\F14D";
+    font-size: 40px
+}
+
+.ivu-icon-ios-apps:before {
+    content: "\F110";
+    font-size: 40px
+}
+
+.ivu-icon-ios-flash-outline:before {
+    content: "\F1CA";
+    font-size: 40px
+}
+
+.ivu-icon-ios-calculator:before {
+    content: "\F15A";
+    font-size: 40px
+}
+
+.ivu-icon-logo-yen:before {
+    font-size: 40px
+}
+
+.tabs1 {
+    background: #0abf5b;
+    color: #fff
+}
+
+.tabs1:after {
+    content: " ";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: 8px solid #0abf5b;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -8px;
+    z-index: 999
+}
+
+.tabs2 {
+    color: #fff;
+    background: #006eff
+}
+
+@media (min-width: 1024px) {
+    .parthree {
+        padding:80px 0;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 4% 30px 4%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1100px) {
+    .parthree {
+        padding:80px 0;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 4% 30px 4%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1280px) {
+    .parthree {
+        padding:80px 0;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 4% 30px 4%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1366px) {
+    .parthree {
+        padding:80px 0;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 6% 30px 6%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1440px) {
+    .parthree {
+        padding:80px 3%;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 7% 30px 7%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1680px) {
+    .parthree {
+        padding:80px 5%;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 12% 30px 12%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}
+
+@media (min-width: 1920px) {
+    .parthree {
+        padding:80px 17%;
+        background-color: #f2f1f8
+    }
+
+    .partTwo {
+        padding: 0 17% 30px 17%;
+        background-color: #fff;
+        text-align: centerï¼›
+    }
+}

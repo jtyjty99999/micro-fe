@@ -1,0 +1,29 @@
+<td colspan="7">
+    <!--<div class="state">-->
+        <!--<div class="null-loading"></div>-->
+    <!--</div>-->
+    <div class="echart-panel">
+        <div class="item" >
+            <h3 class="echart-title">总{{data.type}}渠道分布</h3>
+
+            <div class="state" id="pieState">
+            <div class="null-loading"></div>
+            </div>
+            <div class="echart-iframe" id="pieChart" style="width:430px;height:300px;margin-left:-15px;display: none;">
+            </div>
+            <div class="chart-num" style="left: 159px;    top: 182px;">
+            </div>
+        </div>
+        <div class="item">
+            <h3 class="echart-title">近24小时{{data.type}}趋势
+                {{ if data.type=='播放量' }}
+                <em class="text-dark" style="font-size:12px">（暂时只提供天天快报、腾讯新闻、腾讯视频和QQ浏览器的实时数据；实时数据仅供参考，以当日累计数据为准）</em>
+                {{ else if data.type=='阅读量' }}
+                <em class="text-dark" style="font-size:12px">（暂时只提供天天快报、腾讯新闻和QQ浏览器的实时数据；实时数据仅供参考，以当日累计数据为准）</em>
+                {{ /if }}
+            </h3>
+            <div class="echart-iframe"  id="lineChart" style="width:380px;height:300px">
+            </div>
+        </div>
+    </div>
+</td>

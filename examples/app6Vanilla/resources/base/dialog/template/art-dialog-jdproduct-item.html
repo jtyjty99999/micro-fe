@@ -1,0 +1,17 @@
+{{each list}}
+	<tr class="productDataRow">
+		<td class="cell-radio" data="{{list[$index].id}}">
+			<label class="ui-radio selectProd">
+				<input type="radio"><i class="icon icon-radio"></i>
+			</label>
+		</td>
+		<td class="cell-pic"><img src="{{list[$index].imgurl}}" alt=""></td>
+		<td class="cell-good">
+			<a class="good-name link-title" title="{{list[$index].name}}" href="{{list[$index].url}}" target="_blank">{{list[$index].name}}</a>		
+		</td>
+		<td class="cell-2">{{list[$index].source}}</td>
+		<td class="cell-3">{{list[$index].catalog}}</td>
+		<td class="cell-4">{{list[$index].price}}</td>
+		<td class="cell-5">{{list[$index].commision}}</td>
+	</tr>
+{{/each}}

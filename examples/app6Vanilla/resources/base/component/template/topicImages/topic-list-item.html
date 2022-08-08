@@ -1,0 +1,14 @@
+{{each group_info as item}}
+{{if item.total_count>3}}
+<div class="special-photos-item  clearfix">
+    <div class="left">
+        <img src={{item.preview_url}}>
+        <div class="num"><span>{{item.total_count}}</span>张</div>
+    </div>
+    <div class="right">
+        <div class="title">{{item.title}}</div>
+        <button type="button" data-id="{{item.id}}" class="btn toImagelist">创建组图</button>
+    </div>
+</div>
+{{/if}}
+{{/each}}
