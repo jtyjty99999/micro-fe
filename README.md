@@ -18,7 +18,7 @@ main entry
  
   
 ```
-import { registerMicroApps ,start} from '@tencent/micro-fe'
+import { registerMicroApps ,start} from 'micro-fe'
     registerMicroApps(
         [{
                 name:'slideNav',
@@ -82,8 +82,6 @@ import { registerMicroApps ,start} from '@tencent/micro-fe'
 注意！ bcBus发消息的时候，所有的bcSubscriber都会接收到，而 bcSubscriber 发送时，自己不会接收到，其他应用会接收到。
 这是因为bcBus不是属于当前应用的，而bcSubscriber则是跟着当前应用的。
 一般情况下，需要发送消息的应用使用自己的bcSubscriber发送即可，除非是需要自己也收到消息。
-
-具体原理参考 http://km.oa.com/articles/show/464657
 
 ```
 export function mount(props) {
@@ -180,7 +178,7 @@ import('./portal');
 #### example
 
 ```javascript
-import { registerMicroApps } from '@tencent/micro-fe';
+import { registerMicroApps } from 'micro-fe';
 registerMicroApps(microApps, {
   createActivityFn: (app) => {
     const { hash } = app;
